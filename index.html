@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weight Converter App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="box">
+      <h2>Weight Converter</h2>
+      <p>
+        <label>Kilograms</label>
+        <input type="number" id="kilograms" placeholder="kilograms" oninput="kiloweightConverter(this.value)" onchange="kiloweightConverter(this.value)">
+      </p>
+
+      <p>Grams: <span id="grams"></span></p>
+      <p>Milligrams: <span id="milligrams"></span></p>
+    </div>
+    
+    <script>
+      function kiloweightConverter(value) {
+        document.getElementById("grams").innerHTML = value * 1000;
+        document.getElementById("milligrams").innerHTML = value * 1000000;
+      }
+    </script>
+  </body>
+</html>
